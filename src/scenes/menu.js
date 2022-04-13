@@ -9,7 +9,7 @@ class Menu extends Phaser.Scene {
     create(){
         this.titleText = this.add.text(screenWidth/2, screenHeight/2 - 410, 'Welcome', menuConfig).setOrigin(0.5);
         this.descriptionText = this.add.text(screenWidth/2, screenHeight/2 - 310, 'Please input the code below', textConfig).setOrigin(0.5);
-        this.resultText = this.add.text(screenWidth/2, screenHeight/2 - 110, '', textConfig).setOrigin(0.5);
+        this.resultText = this.add.text(screenWidth/2, screenHeight/2 - 110, encrypt(""), textConfig).setOrigin(0.5);
         
 
         this.nameInput = this.add.dom(screenWidth/2, screenHeight/2 - 210).createFromCache("form");
@@ -19,10 +19,10 @@ class Menu extends Phaser.Scene {
         // distinctgreenpandaeatingbamboo
         this.returnKey.on("down", event => {
             let name = this.nameInput.getChildByName("inputBox");
-            if(name.value == "correctTarget"){
+            if(encrypt(name.value) == "pdssdfuusbfhu"){
                 this.resultText.setText("Congradulations")
             }
-            else if(name.value === "distinctgreenpandaeatingbamboo") {
+            else if(encrypt(name.value) === "eofbubojchnbpceptjjudohufsofbq") {
                 this.resultText.setText("Nice Try");
             }
             else{
