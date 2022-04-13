@@ -11,9 +11,21 @@ let screenCenterY = screenHeight / 2;
 debugToggle = false;
 
 //standard text config
-let textConfig = {
+let menuConfig = {
     fontFamily: 'horror',
     fontSize: '100px',
+    color: '#000000',
+    align: 'center',
+    padding: {
+        top: 5,
+        bottom: 5,
+    }
+}  
+
+//standard text config
+let textConfig = {
+    fontFamily: 'horror',
+    fontSize: '70px',
     color: '#000000',
     align: 'center',
     padding: {
