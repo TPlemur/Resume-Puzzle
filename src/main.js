@@ -25,21 +25,18 @@ let textConfig = {
 //game config
 let config = {
     type: Phaser.AUTO,
+    parent: "game",
     width: screenWidth,
     height: screenHeight,
+    dom:{
+        createContainer: true
+    },
+    // scalse breaks
     scale: {
         mode: Phaser.Scale.FIT,
         autoCenter: Phaser.Scale.CENTER_BOTH
     },
     scene:[Menu],
-    physics:{
-        default:'arcade',
-        arcade:{
-            gravity: {y:1600},
-            debug: debugToggle
-            
-        }
-    },
     backgroundColor: 0xFFFFFF
 }
 
