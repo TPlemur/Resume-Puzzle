@@ -5,13 +5,14 @@ class Menu extends Phaser.Scene {
 
     preload(){
         this.load.html("form","src/form.html")
+        this.load.image('hintButton', './assets/Hbutton.png');
     }
     create(){
         //all the text
         this.titleText = this.add.text(screenWidth/2, screenHeight/2 - 410, 'Welcome', menuConfig).setOrigin(0.5);
         this.descriptionText = this.add.text(screenWidth/2, screenHeight/2 - 310, 'Please input the Passphrase below', textConfig).setOrigin(0.5);
         this.resultText = this.add.text(screenWidth/2, screenHeight/2 - 110, encrypt(""), textConfig).setOrigin(0.5);
-        this.hintText = this.add.text(screenWidth/2, screenHeight/2 - 10, "", textConfig).setOrigin(0.5);
+        this.hintText = this.add.text(screenWidth/2, screenHeight/2 + 90, "", textConfig).setOrigin(0.5);
         
         //input box
         this.nameInput = this.add.dom(screenWidth/2, screenHeight/2 - 210).createFromCache("form");
@@ -34,7 +35,7 @@ class Menu extends Phaser.Scene {
         });
 
         //hint button
-        this.launchBtn = this.add.sprite(screenCenterX, screenCenterY - 120, 'launchButton').setInteractive().setScale(0.9); //Initialize the button
+        this.launchBtn = this.add.sprite(screenCenterX, screenCenterY - 20, 'hintButton').setInteractive().setScale(0.9); //Initialize the button
         this.launchBtn.on('pointerdown', () => this.hintText.setText(randHint())); //What happens when you click   
     }
     update(){
