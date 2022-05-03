@@ -9,7 +9,7 @@ class Menu extends Phaser.Scene {
     create(){
         //all the text
         this.titleText = this.add.text(screenWidth/2, screenHeight/2 - 410, 'Welcome', menuConfig).setOrigin(0.5);
-        this.descriptionText = this.add.text(screenWidth/2, screenHeight/2 - 310, 'Please input the code below', textConfig).setOrigin(0.5);
+        this.descriptionText = this.add.text(screenWidth/2, screenHeight/2 - 310, 'Please input the Passphrase below', textConfig).setOrigin(0.5);
         this.resultText = this.add.text(screenWidth/2, screenHeight/2 - 110, encrypt(""), textConfig).setOrigin(0.5);
         this.hintText = this.add.text(screenWidth/2, screenHeight/2 - 10, "", textConfig).setOrigin(0.5);
         
