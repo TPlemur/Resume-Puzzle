@@ -6,8 +6,13 @@ class Menu extends Phaser.Scene {
     preload(){
         this.load.html("form","src/form.html")
         this.load.image('hintButton', './assets/Hbutton.png');
+        this.load.image('background', './assets/EncodingScroll.png');
     }
     create(){
+
+        //background image
+        this.bgborder = this.add.sprite(screenCenterX, screenCenterY, 'background').setScale(1.4);
+
         //all the text
         this.titleText = this.add.text(screenWidth/2, screenHeight/2 - 410, 'Welcome', menuConfig).setOrigin(0.5);
         this.descriptionText = this.add.text(screenWidth/2, screenHeight/2 - 310, 'Please input the Passphrase below', textConfig).setOrigin(0.5);

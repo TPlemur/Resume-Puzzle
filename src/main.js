@@ -3,7 +3,7 @@
 
 //screen configs
 const screenWidth = 1920;
-const screenHeight = 1080;
+const screenHeight = screenWidth*1.294;
 let screenCenterX = screenWidth / 2;
 let screenCenterY = screenHeight / 2;
 
