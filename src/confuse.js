@@ -15,7 +15,7 @@ function randHint(){
         "If androids dream of electric sheep, \ncould one count to 26 before falling asleep?",
         "I could really go for some Bacon right now.",
         "If you're desparate you could always try inspect element.",
-        "Don't feel left behind, I'm sure you're heading right on track.",
+        "Don't feel left behind, \nI'm sure you're heading right on track.",
         "If you feel like your going round in circles, \ndon't worry, you are closer than you think",
         "Zeros stay where they are, don't be a zero, \nget out there and do something."
     ];
